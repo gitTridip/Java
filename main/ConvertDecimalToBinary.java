@@ -19,9 +19,11 @@ public class ConvertDecimalToBinary {
 				num=num/2;
 			}
 		}
+		
 		String binNum="";
 		for(Integer i:bin)
 			binNum=binNum+i;
+		
 		System.out.println(binNum);
 		sc.close();
 	}
