@@ -1,10 +1,10 @@
-package Programming.Collection;
+package programming.collection;
 
 import java.util.Comparator;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-import Programming.Src.Employee;
+import programming.Employee;
 
 public class StoreEmployeeInReverseOrder {
 	public static void main(String[] args) {

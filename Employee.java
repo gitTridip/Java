@@ -1,4 +1,4 @@
-package Programming.Src;
+package programming;
 
 public class Employee implements Comparable<Employee> {
 	private String eName;

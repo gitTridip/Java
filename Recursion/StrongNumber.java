@@ -1,16 +1,35 @@
-package Programming.Recursion;
+package programming.recursion;
 
 import java.util.Scanner;
 
 public class StrongNumber {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter number:");
-		int num=sc.nextInt();
-		if(num==check(num))
-			System.out.println("Strong Number");
-		else
-			System.out.println("Not a strong number");
+		String lim=null;
+		int low;
+		int high;
+		while(true) {
+			System.out.print("Enter range of number (use blank space between two limit): ");
+			lim=sc.nextLine();
+			String[] split = lim.split(" ");
+			if(split.length!=2)
+				System.out.println("Invalid input");
+			else {
+				try {
+					low=Integer.parseInt(split[0]);
+					if(low<=0) 
+						low=1;
+					high=Integer.parseInt(split[1]);
+					break;
+				} catch (Exception e) {
+					System.out.println("Invalid input");
+				}
+			}
+		}
+		for(int i=low;i<=high;i++) {
+			if(i==check(i))
+				System.out.print(i+" ");
+		}
 		sc.close();
 	}	
 	
@@ -21,7 +40,7 @@ public class StrongNumber {
 	}
 	
 	static int fact(int digit) {
-		if(digit>1)
+		if(digit>=1)
 			return digit*fact(digit-1);
 		return 1;
 	}
